@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.10)
 
 project(VulkanTest VERSION 1.0)
 
+enable_testing()
+
 set(CMAKE_CXX_STANDARD 17)
 add_compile_options(-O2)
 
