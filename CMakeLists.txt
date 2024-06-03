@@ -9,9 +9,13 @@ add_compile_options(-O2)
 
 file(GLOB project_sources
  "src/*.cpp"
+ "src/vendor/stb_image/*.cpp"
+ "src/vendor/imgui/*cpp"
  )
 
 add_executable(${PROJECT_NAME} ${project_sources})
+
+target_sources(${PROJECT_NAME} PRIVATE ${project_headers})
 
 find_package(Vulkan REQUIRED)
 
